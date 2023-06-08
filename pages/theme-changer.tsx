@@ -26,7 +26,7 @@ const ThemeChangerPage = ({ theme }: Props) => {
 
   const onThemeChange = (event: ChangeEvent<HTMLInputElement>) => {
     const selectedTheme = event.target.value;
-    console.log({ selectedTheme });
+    // console.log({ selectedTheme });
     setCurrentTheme(selectedTheme);
     localStorage.setItem("theme", selectedTheme);
     Cookies.set("theme", selectedTheme);
@@ -37,10 +37,10 @@ const ThemeChangerPage = ({ theme }: Props) => {
     console.log({ data });
   };
 
-  useEffect(() => {
-    console.log("LocalStorage: ", localStorage.getItem("theme"));
-    console.log("Cookies: ", Cookies.get("theme"));
-  }, []);
+  // useEffect(() => {
+  //   console.log("LocalStorage: ", localStorage.getItem("theme"));
+  //   console.log("Cookies: ", Cookies.get("theme"));
+  // }, []);
 
   return (
     <Layout>
